@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 
 import PIL
+from PIL import Image
 
 from typing import *
 from classification import ( ResultVector, Numbers )
@@ -21,7 +22,7 @@ class FirstModel(object):
     def __str__(self):
         return f"<{self.nickname}:{self.version} ; author: {self.author}>"
 
-    def run(self, image: PIL.Image, predefined_result: int = None) -> ResultVector:
+    def run(self, image: Image, predefined_result: int = None) -> ResultVector:
         #TODO: Implement here.
         result = ""
 
@@ -31,10 +32,10 @@ class FirstModel(object):
         image.show()
         return rv.SUCCESS
 
-    def test(self, image: PIL.Image=None) -> ResultVector:
+    def test(self, image: Image=None) -> ResultVector:
         if type(image) is str:
-            return self.run(PIL.image.open(image))
-        elif type(image) is PIL.Image:
+            return self.run(Image.open(image))
+        elif type(image) is Image:
             return self.run(image)
         else:
             print('The test image cannot be provided.')
