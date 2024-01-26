@@ -4,7 +4,7 @@
 @Date: 27.01.2024 / @00.37
 @version: v0.01
 """
-from mnist import FirstModel
+from main import FirstModel
 
 import random
 
