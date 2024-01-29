@@ -4,7 +4,7 @@ class ResultVector(Enum):
     SUCCESS = 0
     FAILURE = -1
 
-class Numbers(Enum):
+class NumberVector(Enum):
     ONE = 1
     TWO = 2
     THREE = 3
